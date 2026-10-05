@@ -15,6 +15,7 @@ NAV = [
     st.Page("views/home.py", title="首页", icon="🏠", url_path="home", default=True),
     st.Page("views/0_电路分析速览.py", title="电路分析速览", icon="⚡", url_path="circuit-basics"),
     st.Page("views/1_卡诺图化简器.py", title="卡诺图化简器", icon="🎯", url_path="kmap"),
+    st.Page("views/2_触发器波形.py", title="触发器波形", icon="🔀", url_path="flip-flop"),
 ]
 
 st.navigation(NAV).run()
