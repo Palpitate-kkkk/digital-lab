@@ -16,6 +16,7 @@ NAV = [
     st.Page("views/0_电路分析速览.py", title="电路分析速览", icon="⚡", url_path="circuit-basics"),
     st.Page("views/1_卡诺图化简器.py", title="卡诺图化简器", icon="🎯", url_path="kmap"),
     st.Page("views/2_触发器波形.py", title="触发器波形", icon="🔀", url_path="flip-flop"),
+    st.Page("views/3_时序波形.py", title="时序波形", icon="⏱️", url_path="timing"),
 ]
 
 st.navigation(NAV).run()
