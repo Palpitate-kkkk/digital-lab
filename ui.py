@@ -21,7 +21,7 @@ html, body, [class*="css"] {
 
 /* 标题：衬线体，教材观感 */
 h1, h2, h3, h4 {
-    font-family: Georgia, "Songti SC", "Times New Roman", serif !important;
+    
     color: #1E3A5F;
     letter-spacing: .2px;
 }
@@ -49,7 +49,7 @@ p, li { line-height: 1.85; }
 [data-testid="stMarkdownContainer"] table { border-collapse: collapse; width: 100%; }
 [data-testid="stMarkdownContainer"] th {
     color: #1E3A5F;
-    font-family: Georgia, "Songti SC", serif;
+    
     border-bottom: 1px solid #D9E1E9 !important;
 }
 [data-testid="stMarkdownContainer"] td { border-bottom: 1px solid #F1F4F7 !important; }
@@ -106,7 +106,7 @@ def hero(title, subtitle, tags=None):
         tag_html = "<div style='margin-top:1rem;'>{}</div>".format(items)
     st.markdown(
         "<div style='padding:1.2rem 0 .3rem 0;'>"
-        "<div style=\"font-family: Georgia, 'Songti SC', serif; font-size:2.1rem;"
+        "<div style=\" font-size:2.1rem;"
         "font-weight:600; color:#1E3A5F; line-height:1.25;\">{}</div>"
         "<div style='color:#6D8095; margin-top:.5rem; font-size:.95rem;'>{}</div>"
         "{}</div>".format(title, subtitle, tag_html),
@@ -130,7 +130,7 @@ def style_fig(fig, height=380, title=None, x=None, y=None):
         paper_bgcolor="rgba(0,0,0,0)",
         plot_bgcolor="#FFFFFF",
         colorway=[ACCENT, STEEL, NAVY, ACCENT_WARM],
-        font=dict(family="Georgia, 'Songti SC', serif", size=13, color="#1E3A5F"),
+        font=dict(family="sans-serif", size=13, color="#1E3A5F"),
         margin=dict(l=8, r=14, t=50 if title else 28, b=8),
         legend=dict(bgcolor="rgba(255,255,255,.92)", bordercolor=LINE, borderwidth=1),
         title=dict(text=title, font=dict(size=15, color="#1E3A5F")) if title else None,

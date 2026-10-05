@@ -94,11 +94,15 @@ fig = go.Figure()
 fig.add_trace(go.Scatter(x=t, y=u, mode="lines", name="uC / U",
                          line=dict(color=ui.ACCENT, width=2.6)))
 for k, txt in [(1, "63.2 %"), (3, "95 %")]:
-    fig.add_trace(go.Scatter(x=[k * tau], y=[1 - np.exp(-k)], mode="markers+text",
-                             text=["t = {}τ  {}".format(k, txt)],
-                             textposition="middle right", showlegend=False,
-                             textfont=dict(color=ui.ACCENT_WARM),
+    yk = 1 - np.exp(-k)
+    fig.add_trace(go.Scatter(x=[k * tau], y=[yk], mode="markers",
+                             showlegend=False, hoverinfo="skip",
                              marker=dict(size=10, color=ui.ACCENT_WARM)))
+    fig.add_annotation(x=k * tau, y=yk, text="t = {}τ  {}".format(k, txt),
+                       showarrow=False, xshift=14, yshift=-20,
+                       xanchor="left", yanchor="top",
+                       font=dict(color=ui.ACCENT_WARM, size=13))
+
 ui.style_fig(fig, height=380, title="一阶 RC 阶跃响应", x="t (µs)", y="uC / U")
 fig.update_yaxes(range=[0, 1.06])
 with c2:
