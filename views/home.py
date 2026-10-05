@@ -24,7 +24,7 @@ with c3:
         st.metric("技术栈", "Plotly", help="numpy + plotly + streamlit，不装额外依赖")
 with c4:
     with st.container(border=True):
-        st.metric("状态", "本地跑通", help="推上 Streamlit Cloud 后改为「已上线」")
+        st.metric("状态", "已上线", help="https://zju-digital-lab.streamlit.app")
 
 st.write("")
 st.markdown("## §1 交互模块")
@@ -87,6 +87,7 @@ with st.container(border=True):
     st.markdown("- 📦 源码仓库：https://github.com/Palpitate-kkkk/signal-lab")
 with st.container(border=True):
     st.markdown("**🔌 digital-lab · 本项目**")
+    st.markdown("- 🔗 在线体验：https://zju-digital-lab.streamlit.app")
     st.markdown("- 📦 源码仓库：https://github.com/Palpitate-kkkk/digital-lab")
 
 st.write("")
